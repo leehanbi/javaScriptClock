@@ -32,13 +32,16 @@ function handleSubmit(event){
     paintToDo(currentValue);
     todoInput.value = "";
 }
+// get toDoList Function
+function loadToDolist(toDo){
+    paintToDo(toDo.text);
+}
+
 function loadToDos(){
     const loadedToDos = localStorage.getItem(TODOS_LS);
     if(loadedToDos !== null){
         const parsedToDos = JSON.parse(loadedToDos);
-        parsedToDos.forEach(function(toDo){
-            console.log(toDo.text);
-        });
+        parsedToDos.forEach(loadToDolist);
     }
 }
 
