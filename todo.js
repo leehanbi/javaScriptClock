@@ -3,17 +3,35 @@ const toDoForm = document.querySelector(".js-toDoForm"),
     todoList = document.querySelector(".js-toDoList");
 
 const TODOS_LS = 'toDos';
-const toDos = [];
+let toDos = [];
+
+
+function deleteToDO(event){
+    const delBtn = event.target
+    , deleteTagetLi = delBtn.parentNode;
+    todoList.removeChild(deleteTagetLi);
+    const cleanToDos = toDos.filter(function(toDo){
+        return toDo.id !== parseInt(deleteTagetLi.id);
+    });
+    console.log(toDos);
+    console.log(cleanToDos);
+    toDos = cleanToDos;
+    saveToDos();
+
+}
+
 function saveToDos(){
     //JSON.stringify()는 Object의 형태를 String의 형태로 바꿔준다. 
     localStorage.setItem(TODOS_LS,JSON.stringify(toDos));
 }
+
 function paintToDo(text){
     const li = document.createElement("li");
     const deleteBtn = document.createElement("button");
     const span = document.createElement("span");
     const newId = toDos.length + 1;
     deleteBtn.innerHTML = "❌";
+    deleteBtn.addEventListener("click", deleteToDO);
     span.innerText = text;
     li.appendChild(deleteBtn);
     li.appendChild(span);
