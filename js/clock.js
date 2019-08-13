@@ -1,6 +1,7 @@
 const clockContainer = document.querySelector(".js-clock"),
     clockTitle = clockContainer.querySelector("h1");
 
+// 현재 시간 설정 후 화면 출력 
 function getTime(){
     const date = new Date();
     const minutes = date.getMinutes();
@@ -11,6 +12,7 @@ function getTime(){
     `;
 }
 
+// 초기작업 
 function init(){
     getTime();
     setInterval(getTime,1000);
