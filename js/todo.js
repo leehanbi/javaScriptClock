@@ -12,8 +12,7 @@ function deleteToDO(event) {
   const cleanToDos = toDos.filter(function(toDo) {
     return toDo.id !== parseInt(deleteTagetLi.id)
   })
-  console.log(toDos)
-  console.log(cleanToDos)
+
   toDos = cleanToDos
   saveToDos()
   //localStorage.removeItem(TODOS_LS,);

@@ -1,7 +1,7 @@
 const weather = document.querySelector(".js-weather")
 const COORDS = "coords"
 // 날씨 취득 APIKEY
-const API_KEY = ""
+const API_KEY = "d540de0c3d2dbd20d0fbcb6569e34643"
 // 날씨 취득하기
 function getWeather(latitude, longitude) {
   // API 호출 패스
@@ -16,6 +16,7 @@ function getWeather(latitude, longitude) {
       // 데이터가 준비되면 데이터 내용 출력
       // 온도
       const temp = json.main.temp
+
       // 로컬 위치
       const place = json.name
       // 화면에 날씨,위치 출력
