@@ -67,5 +67,5 @@ function loadCoords() {
 function init() {
   loadCoords()
 }
-
+// 초기작업 실행
 init()
