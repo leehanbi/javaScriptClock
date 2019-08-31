@@ -15,9 +15,9 @@ function getWeather(latitude, longitude) {
         })
         .then(function (json) {
             const yen = json.JPYKRW[0]
-            const currntYen = Math.round(yen * KRW);
+            const KRWYen = Math.round(yen * KRW);
 
-            exchange.innerHTML = `현재 엔화 환율 :100엔 : ${currntYen}원`
+            exchange.innerHTML = `현재 엔화 환율 :100엔 : ${KRWYen}원`
         })
 }
 function init() {
