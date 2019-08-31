@@ -4,7 +4,7 @@ const KRWJPY = "KRWJPY"
 const KRW = 100
 
 // 날씨 취득하기
-function getWeather(latitude, longitude) {
+function getExchange() {
     // API 호출 패스
     fetch(
         `https://earthquake.kr:23490/query/${JPYKRW},${KRWJPY}`
@@ -20,8 +20,9 @@ function getWeather(latitude, longitude) {
             exchange.innerHTML = `현재 엔화 환율 :100엔 : ${KRWYen}원`
         })
 }
+
 function init() {
-    getWeather()
+    getExchange()
 }
 
 init()
