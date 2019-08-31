@@ -8,11 +8,11 @@ function getWeather(latitude, longitude) {
   fetch(
     `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=metric`
   )
-    .then(function(response) {
+    .then(function (response) {
       // fetch작업이 끝날 때까지 기다림.
       return response.json()
     })
-    .then(function(json) {
+    .then(function (json) {
       // 데이터가 준비되면 데이터 내용 출력
       // 온도
       const temp = json.main.temp

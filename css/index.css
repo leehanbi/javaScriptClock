@@ -33,6 +33,8 @@ input {
   background: linear-gradient(to right, white, white) 5px calc(100% - 5px) / calc(100% - 10px) 2px
     no-repeat;
   padding: 10px;
+  color: white;
+  font-size :20px;
 }
 input::-webkit-input-placeholder {
   color: white;
