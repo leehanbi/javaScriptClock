@@ -1,13 +1,13 @@
 const exchange = document.querySelector(".js-Exchange")
 const JPYKRW = "JPYKRW"
-const KRWJPY = "KRWJPY"
-const KRW = 100
+// 100엔당원화
+const KRW_100 = 100
 
 // 날씨 취득하기
 function getExchange() {
     // API 호출 패스
     fetch(
-        `https://earthquake.kr:23490/query/${JPYKRW},${KRWJPY}`
+        `https://earthquake.kr:23490/query/${JPYKRW}`
     )
         .then(function (response) {
             // fetch작업이 끝날 때까지 기다림.
@@ -16,8 +16,8 @@ function getExchange() {
         .then(function (json) {
             console.log(json)
             const yen = json.JPYKRW[0]
-            const KRWYen = Math.round(yen * KRW);
-            exchange.innerHTML = `현재 엔화 환율  100엔 : ${KRWYen}원`
+            const currentKRW = Math.round(yen * KRW_100);
+            exchange.innerHTML = `현재 엔화 환율  100엔 : ${currentKRW}원`
         })
 }
 
