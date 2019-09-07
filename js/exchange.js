@@ -14,7 +14,6 @@ function getExchange() {
             return response.json()
         })
         .then(function (json) {
-            console.log(json)
             const yen = json.JPYKRW[0]
             const currentKRW = Math.round(yen * KRW_100);
             exchange.innerHTML = `현재 엔화 환율  100엔 : ${currentKRW}원`

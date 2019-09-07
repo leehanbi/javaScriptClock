@@ -70,7 +70,9 @@ ul {
     opacity: 1;
   }
 }
-
+#js-Exchange_Bank_View{
+  display: none;
+}
 .bgImage {
   position: absolute;
   top: 0;
