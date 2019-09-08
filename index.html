@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Schedule</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/menu.css" />
+    <link
+      rel="stylesheet"
+      href="http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+    />
+    <meta charset="utf-8" />
+  </head>
 
-<head>
-  <title>Schedule</title>
-  <link rel="stylesheet" type="text/css" href="css/index.css" />
-  <link rel="stylesheet" type="text/css" href="css/menu.css" />
-  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  <meta charset="utf-8" />
-</head>
-
-<body>
-    <input type="checkbox" id="menu_state">
+  <body>
+    <input type="checkbox" id="menu_state" />
     <nav>
       <label for="menu_state"><i class="fa"></i></label>
       <ul>
@@ -40,39 +42,45 @@
         </li>
       </ul>
     </nav>
-  <div class="main">
-    <div class="js-main">
-      <div class="js-clock">
-        <h1 class="">00:00</h1>
-      </div>
-      <div id="js-Exchange_Bank_View">
-        <iframe marginwidth="0" marginheight="0" frameborder="0" width="200" scrolling="no" height="180" 
-        style="margin-top: 0; background-color: #ffffff; opacity: 1;" 
-        src="https://okbfex.kbstar.com/quics?page=C019465&cc=b028364:b031677&bgcol=1&CusBus=0&KorEng=K&widthPx=200"></iframe>
-      </div>
-      <div class="js-doDoForm">
-        <form class="js-form form">
-          <input type="text" placeholder="What is your Name?" />
-        </form>
-        <h4 class="js-greetings greetings"></h4>
-        <form class="js-toDoForm">
-          <input type="text" placeholder="Write a To Do here" />
-        </form>
-        <ul class="js-toDoList"></ul>
-        <span class="js-weather"></span>
-        <br />
-        <span class="js-Exchange"></span>
+    <div class="main">
+      <div class="js-main">
+        <div class="js-clock">
+          <h1 class="">00:00</h1>
+        </div>
+        <div id="js-Exchange_Bank_View">
+          <iframe
+            marginwidth="0"
+            marginheight="0"
+            frameborder="0"
+            width="200"
+            scrolling="no"
+            height="180"
+            style="margin-top: 0; background-color: #ffffff; opacity: 1;"
+            src="https://okbfex.kbstar.com/quics?page=C019465&cc=b028364:b031677&bgcol=1&CusBus=0&KorEng=K&widthPx=200"
+          ></iframe>
+        </div>
+        <div class="js-doDoForm">
+          <form class="js-form form">
+            <input type="text" placeholder="What is your Name?" />
+          </form>
+          <h4 class="js-greetings greetings"></h4>
+          <form class="js-toDoForm">
+            <input type="text" placeholder="Write a To Do here" />
+          </form>
+          <ul class="js-toDoList"></ul>
+          <span class="js-weather"></span>
+          <br />
+          <span class="js-Exchange"></span>
+        </div>
       </div>
     </div>
-  </div>
-  <script src="js/todo.js"></script>
-  <script src="js/clock.js"></script>
-  <script src="js/greetting.js"></script>
-  <script src="js/background.js"></script>
-  <script src="js/weather.js"></script>
-  <script src="js/exchange.js"></script>
-  <script src="js/exchange_bank.js"></script>
-  <script src="js/menuControl.js"></script>
-</body>
-
+    <script src="js/todo.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/greetting.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/exchange.js"></script>
+    <script src="js/exchange_bank.js"></script>
+    <script src="js/menuControl.js"></script>
+  </body>
 </html>
