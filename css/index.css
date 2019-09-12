@@ -30,11 +30,11 @@ input {
   border: 0;
   border-bottom: 1 solid white;
   width: 300px;
-  background: linear-gradient(to right, white, white) 5px calc(100% - 5px) / calc(100% - 10px) 2px
-    no-repeat;
+  background: linear-gradient(to right, white, white) 5px calc(100% - 5px) /
+    calc(100% - 10px) 2px no-repeat;
   padding: 10px;
   color: white;
-  font-size :20px;
+  font-size: 20px;
 }
 input::-webkit-input-placeholder {
   color: white;
@@ -70,7 +70,7 @@ ul {
     opacity: 1;
   }
 }
-#js-Exchange_Bank_View{
+#js-Exchange_Bank_View {
   display: none;
 }
 .bgImage {
@@ -81,4 +81,28 @@ ul {
   height: 100%;
   z-index: -1;
   animation: fadeIn 0.5s linear;
+}
+.mainboxList-Start {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  flex-wrap: nowrap;
+}
+.mainbox {
+  display: flex;
+  width: 360px;
+  height: 200px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+}
+.mainbox-menu {
+  display: flex;
+  width: 435px;
+  height: 200px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
 }
